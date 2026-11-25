@@ -1,0 +1,804 @@
+<!DOCTYPE html><html class="dark scroll-smooth" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Epsilon Store | Lujo y Precisión a Tu Alcance</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-bright": "#38393b",
+            "tertiary-fixed-dim": "#c4c6ce",
+            "emerald-stock": "#10B981",
+            "secondary-fixed": "#dde3eb",
+            "inverse-on-surface": "#303033",
+            "inverse-primary": "#725b38",
+            "secondary": "#c1c7cf",
+            "outline-variant": "#4d463c",
+            "on-tertiary-fixed-variant": "#44474d",
+            "primary": "#e2c399",
+            "surface-base": "#0B0C0E",
+            "on-background": "#e3e2e5",
+            "on-surface": "#e3e2e5",
+            "surface-container-lowest": "#0d0e10",
+            "tertiary-fixed": "#e1e2ea",
+            "secondary-fixed-dim": "#c1c7cf",
+            "on-secondary": "#2b3137",
+            "on-tertiary": "#2d3037",
+            "secondary-container": "#41474e",
+            "champagne-gold": "#C5A880",
+            "surface-variant": "#343537",
+            "tertiary-container": "#aaacb4",
+            "on-primary-container": "#513d1d",
+            "champagne-light": "#DFC9A9",
+            "whatsapp-green": "#25D366",
+            "on-primary": "#402d0f",
+            "on-tertiary-container": "#3d4047",
+            "primary-fixed": "#fedeb2",
+            "surface": "#121315",
+            "surface-container-highest": "#343537",
+            "outline": "#998f83",
+            "on-primary-fixed": "#281800",
+            "primary-fixed-dim": "#e0c298",
+            "surface-container-low": "#1b1c1e",
+            "on-surface-variant": "#d1c5b8",
+            "on-secondary-fixed-variant": "#41474e",
+            "on-error-container": "#ffdad6",
+            "background": "#121315",
+            "on-secondary-container": "#afb6bd",
+            "on-tertiary-fixed": "#191c22",
+            "tertiary": "#c6c7d0",
+            "inverse-surface": "#e3e2e5",
+            "surface-container-high": "#292a2c",
+            "surface-elevated": "#121417",
+            "surface-card": "#16191E",
+            "surface-dim": "#121315",
+            "platinum-muted": "#94A3B8",
+            "surface-container": "#1f2022",
+            "on-primary-fixed-variant": "#584323",
+            "surface-tint": "#e0c298",
+            "titanium-border": "#272B33",
+            "primary-container": "#c5a880",
+            "error": "#ffb4ab",
+            "error-container": "#93000a",
+            "on-error": "#690005",
+            "on-secondary-fixed": "#161c22"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "gutter-desktop": "2.5rem",
+            "gutter": "1.5rem",
+            "space-2xl": "6rem",
+            "space-xl": "3.5rem",
+            "margin": "1.25rem",
+            "space-lg": "2rem",
+            "space-sm": "0.5rem",
+            "margin-desktop": "4rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter"],
+            "display": ["Playfair Display"],
+            "body-lg": ["Inter"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "body-md": ["Inter"],
+            "title-editorial": ["Playfair Display"],
+            "label-caps": ["Inter"],
+            "label-currency": ["Inter"],
+            "headline-sm": ["Inter"],
+            "headline-md": ["Playfair Display"],
+            "headline-lg": ["Playfair Display"],
+            "display-mobile": ["Playfair Display"]
+          },
+          "fontSize": {
+            "body-sm": ["0.8125rem", { "lineHeight": "1.5", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "display": ["3.5rem", { "lineHeight": "1.15", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "body-lg": ["1.125rem", { "lineHeight": "1.7", "letterSpacing": "0.01em", "fontWeight": "300" }],
+            "headline-lg-mobile": ["1.85rem", { "lineHeight": "1.3", "fontWeight": "400" }],
+            "body-md": ["0.9375rem", { "lineHeight": "1.65", "letterSpacing": "0.015em", "fontWeight": "300" }],
+            "title-editorial": ["1.125rem", { "lineHeight": "1.5", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "label-caps": ["0.6875rem", { "lineHeight": "1.4", "letterSpacing": "0.18em", "fontWeight": "600" }],
+            "label-currency": ["1.25rem", { "lineHeight": "1.2", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "headline-sm": ["1.25rem", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+            "headline-md": ["1.75rem", { "lineHeight": "1.35", "fontWeight": "500" }],
+            "headline-lg": ["2.5rem", { "lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "display-mobile": ["2.25rem", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .radial-vitrine {
+      background: radial-gradient(circle at 50% 50%, rgba(197, 168, 128, 0.07) 0%, rgba(11, 12, 14, 0) 75%);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #0B0C0E;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #272B33;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #C5A880;
+    }
+  </style>
+</head>
+<body class="bg-surface-base text-on-surface selection:text-surface-base antialiased custom-scrollbar selection:bg-primary-container">
+<!-- TOP TICKER ANNOUNCEMENT -->
+<aside class="w-full bg-surface-container-lowest border-b border-titanium-border/70 py-2.5 px-4 text-center tracking-widest uppercase relative z-50"><div class="max-w-7xl mx-auto flex items-center justify-center gap-2 font-label-caps text-label-caps text-platinum-muted">
+<span class="text-primary">↗</span>
+<span>STOCK INMEDIATO DISPONIBLE — ENVÍOS A TODO EL PAÍS &amp; ATENCIÓN POR WHATSAPP</span>
+<span class="text-primary">↗</span>
+</div></aside>
+<!-- SHARED COMPONENT: TopNavBar -->
+<header class="sticky top-0 z-50 bg-surface-base/85 backdrop-blur-md border-b border-titanium-border/80 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-gutter-desktop max-w-7xl mx-auto h-20"><!-- Logo Anchor -->
+<a class="flex items-center gap-3 group" href="#">
+<img alt="Epsilon Store Emblem" class="w-8 h-8 rounded-full border border-primary/50 p-0.5 object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrBg2WrX8e3CyucFURMvN168gGmk5_GeoatRdpd1VEsNg59slanmmmDZuhNpjTFcwG41UVNPA1wnVJuA1imeA7lvkuDm1J5mAmMLsbTJQdVZqk0R5ClQ7nrpgtMHWF3hqZyjOsVS4yEKimTWnX6BXyeVHeH8rJpVxazD9Nu1JtpZ8Wzuqw_F22BuLJ-0oe8neCH85m5A_WjOs-y7x2BFC7hAYpGHoK9A_ANDMEKlAtQ">
+<span class="font-display text-headline-sm tracking-widest text-on-surface uppercase group-hover:text-primary transition-colors duration-300">
+          EPSILON STORE
+        </span>
+</a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-10">
+<a class="text-primary font-label-caps text-label-caps tracking-widest border-b border-primary pb-1 transition-all duration-200" href="#catalogo">
+          Catálogo
+        </a>
+<a class="text-platinum-muted font-label-caps text-label-caps tracking-widest hover:text-on-surface hover:text-primary hover:border-primary/60 transition-colors duration-200" href="#quienes-somos">
+          Quiénes Somos
+        </a>
+<a class="text-platinum-muted font-label-caps text-label-caps tracking-widest hover:text-on-surface hover:text-primary hover:border-primary/60 transition-colors duration-200" href="#experiencia">
+          Experiencia
+        </a>
+</nav>
+<!-- Cart Action -->
+<div class="flex items-center space-x-4">
+<button class="flex items-center gap-2.5 px-4 py-2 border border-titanium-border hover:border-primary transition-all duration-200 active:scale-95 bg-surface-elevated text-on-surface" id="cart-toggle-btn">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-caps text-label-caps tracking-widest">Carrito (<span id="nav-cart-count">0</span>)</span>
+</button>
+</div></div>
+</header>
+<!-- HERO SECTION: HAUTE HORLOGERIE OBSIDIAN MONOLITH -->
+<section class="relative min-h-[82vh] flex items-center justify-center overflow-hidden border-b border-titanium-border/80"><div class="absolute inset-0 radial-vitrine pointer-events-none"></div>
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-primary-container/10 blur-[140px] pointer-events-none rounded-full"></div>
+<div class="max-w-5xl mx-auto px-6 py-space-2xl text-center relative z-10 flex flex-col items-center">
+<!-- Tagline Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 border border-primary/40 bg-surface-elevated/90 mb-8 backdrop-blur-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-stock animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">
+          COLECCIÓN OFICIAL • STOCK INMEDIATO
+        </span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display text-display text-on-surface mb-6 max-w-4xl tracking-tight leading-tight">
+        Epsilon Store:<br>
+<span class="font-display italic text-primary font-normal">Lujo y precisión a tu alcance</span>
+</h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-platinum-muted max-w-2xl mb-10 leading-relaxed font-light">
+        Piezas auténticas seleccionadas para quienes buscan distinción, estilo y accesibilidad. Relojes <strong class="text-on-surface font-medium">TOMI</strong>, <strong class="text-on-surface font-medium">Casio Classic</strong>, <strong class="text-on-surface font-medium">Quartz</strong> y joyería fina listos para despacho inmediato.
+      </p>
+<!-- CTA Hub -->
+<div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-16">
+<a class="w-full sm:w-auto px-8 py-3.5 bg-primary-container text-on-primary-container font-label-caps text-label-caps tracking-widest uppercase transition-all duration-300 hover:bg-primary-container/85 border border-primary/40 active:scale-95 text-center flex items-center justify-center gap-2 font-semibold shadow-lg shadow-primary-container/10" href="#catalogo">
+<span>Explorar Stock Real</span>
+<span class="material-symbols-outlined text-sm font-semibold" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto px-8 py-3.5 border border-titanium-border bg-surface-elevated/70 text-on-surface font-label-caps text-label-caps tracking-widest uppercase hover:border-primary transition-all duration-300 text-center active:scale-95" href="#quienes-somos">
+          Quiénes Somos
+        </a>
+</div>
+<!-- Trust Pillars / Badges -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-y-4 gap-x-8 pt-8 border-t border-titanium-border/60 w-full max-w-3xl">
+<div class="flex items-center justify-center gap-2.5 text-platinum-muted">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="verified">verified</span>
+<span class="font-body-sm text-body-sm text-platinum-muted tracking-wide">Fotos 100% Reales del Stock</span>
+</div>
+<div class="hidden md:flex items-center justify-center text-titanium-border">•</div>
+<div class="flex items-center justify-center gap-2.5 text-platinum-muted">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="local_shipping">local_shipping</span>
+<span class="font-body-sm text-body-sm text-platinum-muted tracking-wide">Envíos Coordinados a Todo el País</span>
+</div>
+<div class="hidden md:flex items-center justify-center text-titanium-border">•</div>
+<div class="flex items-center justify-center gap-2.5 text-platinum-muted">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="chat">chat</span>
+<span class="font-body-sm text-body-sm text-platinum-muted tracking-wide">Atención Directa por WhatsApp</span>
+</div>
+</div>
+</div></section>
+<!-- CATALOG SECTION -->
+<section class="py-space-2xl px-gutter-desktop max-w-7xl mx-auto" id="catalogo">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 border-b border-titanium-border/80 pb-8"><div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase block mb-2">STOCK DISPONIBLE</span>
+<h2 class="font-display text-headline-lg text-on-surface">Catálogo de Productos</h2>
+<p class="font-body-md text-body-md text-platinum-muted mt-2 max-w-xl">
+          Stock real y garantizado. Elegí tu pieza favorita y coordiná la entrega inmediata por WhatsApp.
+        </p>
+</div>
+<!-- Segmented Category Filters -->
+<div class="flex items-center space-x-1 border border-titanium-border p-1 bg-surface-elevated self-start md:self-auto">
+<button class="category-btn px-4 py-2 font-label-caps text-label-caps uppercase transition-colors bg-surface-card text-primary border border-primary/60" id="filter-all" onclick="filterCategory('all')">
+          Todos los Productos <span class="ml-1 opacity-70">5</span>
+</button>
+<button class="category-btn px-4 py-2 font-label-caps text-label-caps uppercase transition-colors text-platinum-muted hover:text-on-surface" id="filter-relojes" onclick="filterCategory('relojes')">
+          Relojes <span class="ml-1 opacity-70">4</span>
+</button>
+<button class="category-btn px-4 py-2 font-label-caps text-label-caps uppercase transition-colors text-platinum-muted hover:text-on-surface" id="filter-joyeria" onclick="filterCategory('joyeria')">
+          Joyería <span class="ml-1 opacity-70">1</span>
+</button>
+</div></div>
+<!-- Product Grid: Vitrine Style -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="product-container"><!-- Product 1 -->
+<article class="product-item group bg-surface-elevated border border-titanium-border hover:border-primary/60 transition-all duration-300 flex flex-col justify-between" data-category="relojes">
+<div>
+<!-- Visual Vitrine Canvas -->
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden border-b border-titanium-border flex items-center justify-center p-6">
+<div class="absolute inset-0 radial-vitrine opacity-80 group-hover:scale-110 transition-transform duration-700"></div>
+<img class="object-cover w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105" data-alt="A luxury tactical watch with matte black finish resting on an obsidian stone stand inside a dark minimalist horology vitrine. The scene is lit by precision pin-spot lighting highlighting the octagonal beveled bezel, high-contrast dark tones, and subtle metallic accents characteristic of haute horlogerie in a deep black studio atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1YSEkWb6aM11XLqWYFyaoZGjc3YV7g8nqG0H8jZaqqb0I3jmA4OKAaZW5RagsQItBTZdcz_m3MeTaAWr5OUrYu9xtqVKSit8yss8Ux7N44QUf4CXFAWKNEulObWVH_kgupcyrVWYfFRWcOJq3SetPQOWdlFzTxv6DRMldpsUxLXBr_M9tSCjFAymQBaMbNEf7WmwAYuK3d9h3r1Ly_1BKbF1QgGASqPvDU2NzrCnSuX5_VP6bSOPf">
+<!-- Badges -->
+<div class="absolute top-4 left-4 z-20 flex items-center gap-1.5 px-2.5 py-1 bg-surface-base/90 border border-titanium-border backdrop-blur-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-stock"></span>
+<span class="font-label-caps text-label-caps text-emerald-stock uppercase tracking-wider">STOCK DISPONIBLE</span>
+</div>
+<div class="absolute top-4 right-4 z-20 px-2 py-1 bg-surface-base/90 border border-titanium-border backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-platinum-muted uppercase">RELOJERÍA SPORT</span>
+</div>
+</div>
+<!-- Product Details -->
+<div class="p-6">
+<h3 class="font-display text-title-editorial text-on-surface mb-2 group-hover:text-primary transition-colors">
+              Reloj TOMI Sport Anadigi Octagonal Black
+            </h3>
+<p class="font-body-sm text-body-sm text-platinum-muted line-clamp-3 mb-4 leading-relaxed font-light">
+              Diseño análogo–digital de alta resistencia con caja y correa en resina negro mate. Incluye estuche rígido original TOMI, luz LED y cronómetro.
+            </p>
+</div>
+</div>
+<div class="p-6 pt-0 border-t border-titanium-border/40 flex items-center justify-between mt-4">
+<div>
+<span class="font-label-caps text-label-caps text-platinum-muted block uppercase">PRECIO</span>
+<span class="font-label-currency text-label-currency text-primary font-medium">$ 37.000</span>
+</div>
+<button class="px-4 py-2.5 border border-primary/60 text-primary hover:bg-primary-container hover:text-on-primary-container hover:border-primary transition-colors flex items-center gap-2 font-label-caps text-label-caps uppercase active:scale-95" onclick="addToCart('Reloj TOMI Sport Anadigi Octagonal Black', 37000)">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+<span>Agregar al Carrito</span>
+</button>
+</div>
+</article>
+<!-- Product 2 -->
+<article class="product-item group bg-surface-elevated border border-titanium-border hover:border-primary/60 transition-all duration-300 flex flex-col justify-between" data-category="relojes">
+<div>
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden border-b border-titanium-border flex items-center justify-center p-6">
+<div class="absolute inset-0 radial-vitrine opacity-80 group-hover:scale-110 transition-transform duration-700"></div>
+<img class="object-cover w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105" data-alt="An exquisite classic steel wristwatch with a Tiffany blue sunburst dial resting on satin black brushed metal. The polished jubilee link steel bracelet catches dramatic gallery lighting, highlighting crisp indices and sapphire glass reflections within a monochromatic luxury Swiss boutique context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC815ss-0uUjpnKb28FRSDZ2_0YYMADxOBI48jnqSHV-btbXCTNetQfsKElTD8w0AEscbqp-6cDP6nfpkhg_LBEZP0_g1MqFdxV0ByB5xBoIh7a7eCkQ-hmUO37HG-ShLjo_Miv6a24zV7l4NfGmnjDHUKXfXZnFwm9s8V6nPP_QlhxVOu6zhdNQzKju2R5JUmj2M6J8VXp9DoGi4pLZy2ZVPw83sfN0JcnWQj_-3qtQdzgqHk7T8dY">
+<div class="absolute top-4 left-4 z-20 flex items-center gap-1.5 px-2.5 py-1 bg-surface-base/90 border border-titanium-border backdrop-blur-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-stock"></span>
+<span class="font-label-caps text-label-caps text-emerald-stock uppercase tracking-wider">STOCK DISPONIBLE</span>
+</div>
+<div class="absolute top-4 right-4 z-20 px-2 py-1 bg-surface-base/90 border border-titanium-border backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-platinum-muted uppercase">RELOJERÍA CLÁSICA</span>
+</div>
+<div class="absolute bottom-4 right-4 z-20 px-2 py-0.5 bg-surface-base/80 border border-titanium-border text-platinum-muted font-label-caps text-label-caps">
+              ✦ Ver en muñeca
+            </div>
+</div>
+<div class="p-6">
+<h3 class="font-display text-title-editorial text-on-surface mb-2 group-hover:text-primary transition-colors">
+              Reloj Casio Classic Steel — Dial Celeste
+            </h3>
+<p class="font-body-sm text-body-sm text-platinum-muted line-clamp-3 mb-4 leading-relaxed font-light">
+              Esfera celeste Tiffany sunburst con fechador numérico y brazalete jubilé en acero plateado pulido. Elegancia atemporal y versátil.
+            </p>
+</div>
+</div>
+<div class="p-6 pt-0 border-t border-titanium-border/40 flex items-center justify-between mt-4">
+<div>
+<span class="font-label-caps text-label-caps text-platinum-muted block uppercase">PRECIO</span>
+<span class="font-label-currency text-label-currency text-primary font-medium">$ 28.000</span>
+</div>
+<button class="px-4 py-2.5 border border-primary/60 text-primary hover:bg-primary-container hover:text-on-primary-container hover:border-primary transition-colors flex items-center gap-2 font-label-caps text-label-caps uppercase active:scale-95" onclick="addToCart('Reloj Casio Classic Steel — Dial Celeste', 28000)">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+<span>Agregar al Carrito</span>
+</button>
+</div>
+</article>
+<!-- Product 3 -->
+<article class="product-item group bg-surface-elevated border border-titanium-border hover:border-primary/60 transition-all duration-300 flex flex-col justify-between" data-category="relojes">
+<div>
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden border-b border-titanium-border flex items-center justify-center p-6">
+<div class="absolute inset-0 radial-vitrine opacity-80 group-hover:scale-110 transition-transform duration-700"></div>
+<img class="object-cover w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105" data-alt="A pristine steel analog wristwatch featuring a deep carbon black dial with polished chrome markers and date window. The watch is arranged with its solid steel link bracelet coiled neatly upon a dark titanium surface with soft overhead museum showcase lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1RLG2Mket7w6E__m8sMR52CuaQff0Mq4aFXw_GQ9UNpF375u8cqgRdlf_oRXNgaP6jyS8PR68eHhvSK7vHfA7Ht73WtNm7B9x8K4o2sEHhaezjixdSMs--qBJamuxN-H5CuBTFJ9ipIfuucR8xlfpZVCCYiW2Ib0ONbtJlkRDUEWgwHdRzBvMRjxxU29gAB7-NZoV-ppCzahPEtJQinrOTRtkkRT-9CMIKgDLtU_D51JoER4SEr7T">
+<div class="absolute top-4 left-4 z-20 flex items-center gap-1.5 px-2.5 py-1 bg-surface-base/90 border border-titanium-border backdrop-blur-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-stock"></span>
+<span class="font-label-caps text-label-caps text-emerald-stock uppercase tracking-wider">STOCK DISPONIBLE</span>
+</div>
+<div class="absolute top-4 right-4 z-20 px-2 py-1 bg-surface-base/90 border border-titanium-border backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-platinum-muted uppercase">RELOJERÍA CLÁSICA</span>
+</div>
+<div class="absolute bottom-4 right-4 z-20 px-2 py-0.5 bg-surface-base/80 border border-titanium-border text-platinum-muted font-label-caps text-label-caps">
+              ✦ Ver en mano
+            </div>
+</div>
+<div class="p-6">
+<h3 class="font-display text-title-editorial text-on-surface mb-2 group-hover:text-primary transition-colors">
+              Reloj Casio Classic Steel — Dial Negro
+            </h3>
+<p class="font-body-sm text-body-sm text-platinum-muted line-clamp-3 mb-4 leading-relaxed font-light">
+              Esfera negro carbón brillante con índices cromados y fechador. Malla de eslabones macizos en acero inoxidable con traba de seguridad.
+            </p>
+</div>
+</div>
+<div class="p-6 pt-0 border-t border-titanium-border/40 flex items-center justify-between mt-4">
+<div>
+<span class="font-label-caps text-label-caps text-platinum-muted block uppercase">PRECIO</span>
+<span class="font-label-currency text-label-currency text-primary font-medium">$ 28.000</span>
+</div>
+<button class="px-4 py-2.5 border border-primary/60 text-primary hover:bg-primary-container hover:text-on-primary-container hover:border-primary transition-colors flex items-center gap-2 font-label-caps text-label-caps uppercase active:scale-95" onclick="addToCart('Reloj Casio Classic Steel — Dial Negro', 28000)">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+<span>Agregar al Carrito</span>
+</button>
+</div>
+</article>
+<!-- Product 4 -->
+<article class="product-item group bg-surface-elevated border border-titanium-border hover:border-primary/60 transition-all duration-300 flex flex-col justify-between" data-category="relojes">
+<div>
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden border-b border-titanium-border flex items-center justify-center p-6">
+<div class="absolute inset-0 radial-vitrine opacity-80 group-hover:scale-110 transition-transform duration-700"></div>
+<img class="object-cover w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105" data-alt="A refined quartz timepiece with an electric sapphire blue sunburst dial and gold tone indices mounted in a stainless steel casing. The piece is set against dark slate stone in an architectural studio setting with razor-sharp specular highlights on the beveled mineral crystal glass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUDFJN4H917M7E5Rombzuzu4tS7ZM7eV6rzRR6uLaEJBrJx86wZ9GGlP9zh3zNRfPUiMJ-RzQVh77cgiPsqcaRaUQZmeI4oRqON1FWWVxzrXAyCcQu3nBGh2ck4yyAa3lI5gnujt6xFTV_ENXouttYKewFPnuQDWukP0P1HPmdW39jhtj8i6p61euGwdDmU68p7eq_truvP5KqkBYegS5KWYwBcu-JAwPonD_DnqJduaaNk2MBOGEA">
+<div class="absolute top-4 left-4 z-20 flex items-center gap-1.5 px-2.5 py-1 bg-surface-base/90 border border-titanium-border backdrop-blur-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-stock"></span>
+<span class="font-label-caps text-label-caps text-emerald-stock uppercase tracking-wider">STOCK DISPONIBLE</span>
+</div>
+<div class="absolute top-4 right-4 z-20 px-2 py-1 bg-surface-base/90 border border-titanium-border backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-platinum-muted uppercase">RELOJERÍA CASUAL</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-display text-title-editorial text-on-surface mb-2 group-hover:text-primary transition-colors">
+              Reloj Quartz Sunburst Blue Steel
+            </h3>
+<p class="font-body-sm text-body-sm text-platinum-muted line-clamp-3 mb-4 leading-relaxed font-light">
+              Esfera azul zafiro reflectiva con caja pulida en acero inoxidable. Maquinaria de cuarzo de alta precisión y brazalete plateado.
+            </p>
+</div>
+</div>
+<div class="p-6 pt-0 border-t border-titanium-border/40 flex items-center justify-between mt-4">
+<div>
+<span class="font-label-caps text-label-caps text-platinum-muted block uppercase">PRECIO</span>
+<span class="font-label-currency text-label-currency text-primary font-medium">$ 20.000</span>
+</div>
+<button class="px-4 py-2.5 border border-primary/60 text-primary hover:bg-primary-container hover:text-on-primary-container hover:border-primary transition-colors flex items-center gap-2 font-label-caps text-label-caps uppercase active:scale-95" onclick="addToCart('Reloj Quartz Sunburst Blue Steel', 20000)">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+<span>Agregar al Carrito</span>
+</button>
+</div>
+</article>
+<!-- Product 5 (Joyería) -->
+<article class="product-item group bg-surface-elevated border border-titanium-border hover:border-primary/60 transition-all duration-300 flex flex-col justify-between" data-category="joyeria">
+<div>
+<div class="relative w-full aspect-square bg-surface-container-lowest overflow-hidden border-b border-titanium-border flex items-center justify-center p-6">
+<div class="absolute inset-0 radial-vitrine opacity-80 group-hover:scale-110 transition-transform duration-700"></div>
+<img class="object-cover w-full h-full relative z-10 transition-transform duration-500 group-hover:scale-105" data-alt="Dainty four-leaf clover jewelry bracelets with white mother of pearl inlays set in fine gold and polished silver settings. Displayed artistically on black velvet and transparent acrylic presentation pillows in an ultra-luxurious atelier with gentle ambient illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGuoP-ZyfXNEHzvtbOzDTLfIwg_P2nsa8SWlJ6yFYsmGCKkxhQOZkR8TZDK5ObvneBZ5BBaYhoBNmbKouipsjQtC7XZT_Bj4A5HZhbqcVmQTRmxM_XddQsTzrVfbkwdN3i4oqGIAIiaeqhQDXN8prEXkhE58y7c27R9s0Up5p5GPmmC0rN2ZM40qGpbToGnzEDBe4NJPHvDhPXECnG4ocn7mnqe8h2qOBvOsIUcFMEl64nqCpT0D3B">
+<div class="absolute top-4 left-4 z-20 flex items-center gap-1.5 px-2.5 py-1 bg-surface-base/90 border border-titanium-border backdrop-blur-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-stock"></span>
+<span class="font-label-caps text-label-caps text-emerald-stock uppercase tracking-wider">STOCK DISPONIBLE</span>
+</div>
+<div class="absolute top-4 right-4 z-20 px-2 py-1 bg-surface-base/90 border border-titanium-border backdrop-blur-sm">
+<span class="font-label-caps text-label-caps text-platinum-muted uppercase">JOYERÍA FINA</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="font-display text-title-editorial text-on-surface mb-2 group-hover:text-primary transition-colors">
+              Pulseras Trébol Four-Leaf Clover (Gold &amp; Silver)
+            </h3>
+<p class="font-body-sm text-body-sm text-platinum-muted line-clamp-3 mb-4 leading-relaxed font-light">
+              Pulseras finas con dijes de trébol de cuatro hojas y piedras de nácar blanco. Acabados en baño dorado y plateado brillante con cierre regulable.
+            </p>
+</div>
+</div>
+<div class="p-6 pt-0 border-t border-titanium-border/40 flex items-center justify-between mt-4">
+<div>
+<span class="font-label-caps text-label-caps text-platinum-muted block uppercase">PRECIO</span>
+<span class="font-label-currency text-label-currency text-primary font-medium">$ 7.000</span>
+</div>
+<button class="px-4 py-2.5 border border-primary/60 text-primary hover:bg-primary-container hover:text-on-primary-container hover:border-primary transition-colors flex items-center gap-2 font-label-caps text-label-caps uppercase active:scale-95" onclick="addToCart('Pulseras Trébol Four-Leaf Clover', 7000)">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+<span>Agregar al Carrito</span>
+</button>
+</div>
+</article></div>
+</section>
+<!-- VIP CONCIERGE BANNER -->
+<section class="max-w-7xl mx-auto px-gutter-desktop my-space-lg"><div class="relative bg-surface-elevated border border-titanium-border p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary-container/10 blur-[90px] rounded-full pointer-events-none"></div>
+<div class="flex items-start gap-5 max-w-2xl relative z-10">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-base border border-titanium-border flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="videocam">videocam</span>
+</div>
+<div>
+<h4 class="font-display text-headline-sm text-on-surface mb-2 font-medium">
+            ¿Buscás más fotos o videos en vivo de alguna pieza?
+          </h4>
+<p class="font-body-md text-body-md text-platinum-muted font-light">
+            Escribinos por WhatsApp y te enviamos videos de alta resolución del reloj en muñeca antes de coordinar tu compra.
+          </p>
+</div>
+</div>
+<a class="relative z-10 w-full md:w-auto px-7 py-3.5 bg-primary-container text-on-primary-container font-label-caps text-label-caps tracking-widest uppercase hover:bg-primary-container/85 border border-primary/40 transition-all flex items-center justify-center gap-2 font-semibold flex-shrink-0 active:scale-95 shadow-lg shadow-primary-container/10" href="https://wa.me/5491150012019?text=Hola%20Epsilon%20Store,%20me%20gustar%C3%ADa%20ver%20m%C3%A1s%20fotos%20y%20videos%20de%20los%20relojes%20disponibles." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-lg" data-icon="forum">forum</span>
+<span>Consultar por WhatsApp</span>
+</a>
+</div></section>
+<!-- SPLIT SECTION: QUIÉNES SOMOS & NUESTRA EXPERIENCIA (Asymmetric Grid) -->
+<section class="py-space-2xl px-gutter-desktop max-w-7xl mx-auto border-t border-titanium-border/80">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start"><!-- Quiénes Somos (5 cols) -->
+<div class="lg:col-span-5 bg-surface-elevated border border-titanium-border p-8 md:p-10 flex flex-col justify-between h-full relative" id="quienes-somos">
+<div class="absolute top-0 right-0 p-6 pointer-events-none opacity-10">
+<span class="font-display text-8xl text-primary">E</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase block mb-3">FUNDADORES</span>
+<h2 class="font-display text-headline-lg text-on-surface mb-6">Quiénes Somos</h2>
+<div class="space-y-4 font-body-md text-body-md text-platinum-muted leading-relaxed font-light">
+<p>
+              Somos <strong class="text-on-surface font-medium">Genaro Ivars</strong> y <strong class="text-on-surface font-medium">Agustín Fernández</strong>, jóvenes emprendedores apasionados por el lujo, la relojería fina y los grandes desafíos.
+            </p>
+<p>
+              Fundamos <strong class="text-primary font-medium">Epsilon Store</strong> con el objetivo de acercar piezas de alta estética y distinción a quienes buscan destacar. Creemos que la elegancia, el buen porte y la calidad deben estar al alcance de todos con precios justos y atención humana directa.
+            </p>
+</div>
+</div>
+<div class="pt-8 mt-10 border-t border-titanium-border flex items-center justify-between">
+<div>
+<h4 class="font-display text-title-editorial text-on-surface">Genaro Ivars &amp; Agustín Fernández</h4>
+<span class="font-label-caps text-label-caps text-platinum-muted uppercase tracking-widest">Fundadores — Epsilon Store</span>
+</div>
+<div class="w-10 h-10 border border-titanium-border flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg" data-icon="shield">shield</span>
+</div>
+</div>
+</div>
+<!-- Nuestra Experiencia (7 cols) -->
+<div class="lg:col-span-7 bg-surface-elevated border border-titanium-border p-8 md:p-10 flex flex-col justify-between h-full" id="experiencia">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase block mb-3">TRAYECTORIA &amp; CONFIANZA</span>
+<h2 class="font-display text-headline-lg text-on-surface mb-3">Nuestra Experiencia</h2>
+<p class="font-body-md text-body-md text-platinum-muted font-light mb-8">
+            Resultados reales respaldados por cada cliente que nos elige día a día.
+          </p>
+<!-- Metric Cards Bento Pattern -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+<div class="bg-surface-card border border-titanium-border p-6 flex flex-col justify-between hover:border-primary/40 transition-colors">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="history_toggle_drop_down">cloud_upload</span>
+<span class="font-label-caps text-label-caps text-platinum-muted uppercase">PRECISIÓN</span>
+</div>
+<div>
+<span class="font-display text-4xl text-primary block mb-1">+6 <span class="text-xl font-normal text-on-surface">Meses</span></span>
+<p class="font-body-sm text-body-sm text-platinum-muted font-light">De trayectoria sólida en el rubro de relojería y accesorios.</p>
+</div>
+</div>
+<div class="bg-surface-card border border-titanium-border p-6 flex flex-col justify-between hover:border-primary/40 transition-colors">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="verified_user">verified_user</span>
+<span class="font-label-caps text-label-caps text-platinum-muted uppercase">CLIENTES</span>
+</div>
+<div>
+<span class="font-display text-4xl text-primary block mb-1">+100 <span class="text-xl font-normal text-on-surface">Ventas</span></span>
+<p class="font-body-sm text-body-sm text-platinum-muted font-light">Concretadas con clientes 100% satisfechos en todo el país.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-card border border-titanium-border p-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="w-2 h-2 rounded-full bg-emerald-stock"></span>
+<h4 class="font-display text-title-editorial text-on-surface">Stock Inmediato</h4>
+</div>
+<p class="font-body-sm text-body-sm text-platinum-muted font-light leading-relaxed">
+              Relojes y joyería fina a un valor muy accesible, despacho rápido y asesoramiento personalizado de principio a fin.
+            </p>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-titanium-border flex items-center justify-between text-platinum-muted font-body-sm">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-primary" data-icon="lock">lock</span>
+            Compra segura &amp; directa
+          </span>
+<a class="text-primary hover:underline font-label-caps text-label-caps uppercase flex items-center gap-1" href="https://wa.me/5491150012019?text=Hola%20Epsilon%20Store,%20me%20gustar%C3%ADa%20recibir%20atenci%C3%B3n%20personalizada%20sobre%20sus%20relojes%20y%20joyas." rel="noopener noreferrer" target="_blank">
+            ¿Dudas? Chatea 1 a 1 <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div></div>
+</section>
+<!-- CART SIDEBAR / DRAWER -->
+<aside class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-surface-elevated border-l border-titanium-border shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between" id="cart-drawer"><!-- Header -->
+<div class="p-6 border-b border-titanium-border flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_bag">shopping_bag</span>
+<h3 class="font-display text-title-editorial text-on-surface">Tu Pedido (<span id="cart-count">0</span>)</h3>
+</div>
+<button class="text-platinum-muted hover:text-on-surface transition-colors p-1" id="cart-close-btn">
+<span class="material-symbols-outlined text-2xl" data-icon="close">close</span>
+</button>
+</div>
+<!-- Items list -->
+<div class="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar" id="cart-items-container">
+<div class="text-center py-16 text-platinum-muted" id="cart-empty-message">
+<span class="material-symbols-outlined text-4xl mb-2 text-titanium-border" data-icon="shopping_basket">shopping_basket</span>
+<p class="font-body-md text-body-md font-light">Tu carrito se encuentra vacío actualmente.</p>
+<span class="font-label-caps text-label-caps text-primary tracking-widest mt-2 block">EXPLORÁ NUESTRO STOCK REAL</span>
+</div>
+</div>
+<!-- Drawer Summary & Checkout -->
+<div class="p-6 border-t border-titanium-border bg-surface-base space-y-4">
+<div class="space-y-2">
+<div class="flex justify-between font-body-sm text-platinum-muted">
+<span>Subtotal</span>
+<span id="cart-subtotal">$ 0</span>
+</div>
+<div class="flex justify-between font-body-sm text-platinum-muted">
+<span>Entrega / Envío</span>
+<span class="text-primary font-medium">A convenir</span>
+</div>
+<div class="flex justify-between font-display text-headline-sm text-on-surface pt-2 border-t border-titanium-border">
+<span>Total a Pagar</span>
+<span class="text-primary" id="cart-total">$ 0</span>
+</div>
+</div>
+<button class="w-full py-4 bg-primary-container text-on-primary-container font-label-caps text-label-caps tracking-widest uppercase hover:bg-primary-container/85 border border-primary/40 transition-all flex items-center justify-center gap-2 font-semibold active:scale-95 disabled:opacity-40 disabled:cursor-not-allowed shadow-lg shadow-primary-container/10" id="whatsapp-checkout-btn">
+<span class="material-symbols-outlined text-lg" data-icon="chat">chat</span>
+<span>Finalizar compra por WhatsApp</span>
+</button>
+<p class="font-body-sm text-center text-platinum-muted text-xs font-light">
+        Se enviará tu pedido prearmado para una atención rápida y directa.
+      </p>
+</div></aside>
+<!-- Backdrop for Drawer -->
+<div class="fixed inset-0 bg-surface-base/80 backdrop-blur-sm z-40 hidden transition-opacity" id="cart-backdrop"></div>
+<!-- FLOATING WHATSAPP CONCIERGE BUTTON -->
+<a class="fixed bottom-6 right-6 z-40 group flex items-center gap-3 p-3 bg-surface-elevated border border-titanium-border hover:border-primary/80 transition-all duration-300 shadow-2xl backdrop-blur-md active:scale-95" href="https://wa.me/5491150012019?text=Hola%20Epsilon%20Store,%20me%20gustar%C3%ADa%20recibir%20atenci%C3%B3n%20personalizada%20sobre%20sus%20relojes%20y%20joyas." rel="noopener noreferrer" target="_blank">
+<div class="relative w-8 h-8 rounded-full bg-whatsapp-green/20 flex items-center justify-center text-whatsapp-green">
+<span class="material-symbols-outlined text-lg" data-icon="chat">chat</span>
+<span class="absolute top-0 right-0 w-2 h-2 rounded-full bg-whatsapp-green animate-ping"></span>
+</div>
+<div class="hidden sm:block text-left pr-2">
+<span class="font-label-caps text-label-caps text-primary block">Whatsapp</span>
+<span class="font-body-sm text-on-surface text-xs font-medium">Atención Personalizada 24hs</span>
+</div>
+</a>
+<!-- SHARED COMPONENT: Footer -->
+<footer class="bg-surface-base border-t border-titanium-border">
+<div class="w-full max-w-7xl mx-auto px-gutter-desktop py-space-xl flex flex-col gap-space-lg"><div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+<!-- Brand Info -->
+<div class="md:col-span-5 space-y-4">
+<div class="flex items-center gap-3">
+<img alt="Epsilon Store Emblem" class="w-9 h-9 rounded-full border border-primary/40 p-0.5 object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrBg2WrX8e3CyucFURMvN168gGmk5_GeoatRdpd1VEsNg59slanmmmDZuhNpjTFcwG41UVNPA1wnVJuA1imeA7lvkuDm1J5mAmMLsbTJQdVZqk0R5ClQ7nrpgtMHWF3hqZyjOsVS4yEKimTWnX6BXyeVHeH8rJpVxazD9Nu1JtpZ8Wzuqw_F22BuLJ-0oe8neCH85m5A_WjOs-y7x2BFC7hAYpGHoK9A_ANDMEKlAtQ">
+<span class="font-display text-headline-md tracking-wider text-on-surface">EPSILON STORE</span>
+</div>
+<p class="font-body-sm text-body-sm text-platinum-muted max-w-sm leading-relaxed font-light">
+            Relojería y joyería moderna con stock inmediato y envíos a todo el país. Lujo y precisión al alcance de tu mano.
+          </p>
+<div class="pt-2 text-platinum-muted font-body-sm">
+            Fundado por <span class="text-on-surface font-medium">Genaro Ivars &amp; Agustín Fernández</span>
+</div>
+</div>
+<!-- Links: Navegación -->
+<div class="md:col-span-3 space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Navegación</h4>
+<ul class="space-y-2.5 font-body-sm text-body-sm">
+<li><a class="text-platinum-muted hover:text-primary transition-colors duration-200" href="#catalogo">Catálogo de Stock</a></li>
+<li><a class="text-platinum-muted hover:text-primary transition-colors duration-200" href="#quienes-somos">Quiénes Somos</a></li>
+<li><a class="text-platinum-muted hover:text-primary transition-colors duration-200" href="#experiencia">Nuestra Experiencia</a></li>
+<li><a class="text-platinum-muted hover:text-primary transition-colors duration-200" href="#">Inicio</a></li>
+</ul>
+</div>
+<!-- Links: Envíos & Pedidos Directos -->
+<div class="md:col-span-4 space-y-4">
+<h4 class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Envíos &amp; Pedidos</h4>
+<p class="font-body-sm text-body-sm text-platinum-muted leading-relaxed font-light">
+            Cada pedido es atendido directamente por WhatsApp para coordinar el medio de pago más cómodo y el método de envío seguro.
+          </p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 px-4 py-2 border border-titanium-border hover:border-primary text-primary text-body-sm transition-colors" href="https://wa.me/5491150012019" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-sm" data-icon="phone_in_talk">phone_in_talk</span>
+<span>+54 9 11 5001-2019 (WhatsApp Directo)</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Copyright Sub-bar -->
+<div class="pt-8 border-t border-titanium-border/40 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-platinum-muted">
+<div>
+          © 2026 Epsilon Store. Todos los derechos reservados. Lujo y precisión a tu alcance •</div>
+<div class="flex items-center gap-4 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-stock"></span>
+<span class="font-label-caps text-label-caps">Servidor Activo • San Rafael, Mza. Argentina</span>
+</div>
+</div></div>
+</footer>
+<!-- TOAST NOTIFICATION -->
+<div class="fixed bottom-6 left-6 z-50 transform -translate-y-10 opacity-0 pointer-events-none transition-all duration-300 bg-surface-elevated border border-primary text-on-surface px-5 py-3.5 flex items-center gap-3 shadow-2xl" id="toast">
+<span class="material-symbols-outlined text-emerald-stock" data-icon="check_circle">check_circle</span>
+<span class="font-body-sm text-body-sm" id="toast-message">Producto agregado al carrito</span>
+</div>
+<!-- INLINE CART & INTERACTION LOGIC -->
+<script>
+    let cart = [];
+
+    const drawer = document.getElementById('cart-drawer');
+    const backdrop = document.getElementById('cart-backdrop');
+    const cartToggleBtn = document.getElementById('cart-toggle-btn');
+    const cartCloseBtn = document.getElementById('cart-close-btn');
+    const cartCount = document.getElementById('cart-count');
+    const navCartCount = document.getElementById('nav-cart-count');
+    const cartItemsContainer = document.getElementById('cart-items-container');
+    const cartEmptyMessage = document.getElementById('cart-empty-message');
+    const cartSubtotal = document.getElementById('cart-subtotal');
+    const cartTotal = document.getElementById('cart-total');
+    const checkoutBtn = document.getElementById('whatsapp-checkout-btn');
+    const toast = document.getElementById('toast');
+    const toastMessage = document.getElementById('toast-message');
+
+    function toggleCart(open) {
+      if (open) {
+        drawer.classList.remove('translate-x-full');
+        backdrop.classList.remove('hidden');
+      } else {
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.add('hidden');
+      }
+    }
+
+    cartToggleBtn.addEventListener('click', () => toggleCart(true));
+    cartCloseBtn.addEventListener('click', () => toggleCart(false));
+    backdrop.addEventListener('click', () => toggleCart(false));
+
+    function addToCart(title, price) {
+      const existing = cart.find(item => item.title === title);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ title, price, quantity: 1 });
+      }
+      renderCart();
+      showToast('✓ Producto agregado al carrito');
+      toggleCart(true);
+    }
+
+    function removeFromCart(title) {
+      cart = cart.filter(item => item.title !== title);
+      renderCart();
+    }
+
+    function updateQuantity(title, change) {
+      const item = cart.find(i => i.title === title);
+      if (item) {
+        item.quantity += change;
+        if (item.quantity <= 0) {
+          removeFromCart(title);
+        } else {
+          renderCart();
+        }
+      }
+    }
+
+    function renderCart() {
+      const totalCount = cart.reduce((acc, i) => acc + i.quantity, 0);
+      const totalPrice = cart.reduce((acc, i) => acc + (i.price * i.quantity), 0);
+
+      cartCount.textContent = totalCount;
+      navCartCount.textContent = totalCount;
+      cartSubtotal.textContent = `$ ${totalPrice.toLocaleString('es-AR')}`;
+      cartTotal.textContent = `$ ${totalPrice.toLocaleString('es-AR')}`;
+
+      // Toggle items vs empty
+      cartItemsContainer.innerHTML = '';
+      if (cart.length === 0) {
+        cartItemsContainer.appendChild(cartEmptyMessage);
+        checkoutBtn.disabled = true;
+      } else {
+        checkoutBtn.disabled = false;
+        cart.forEach(item => {
+          const itemEl = document.createElement('div');
+          itemEl.className = 'p-3.5 bg-surface-card border border-titanium-border flex items-center justify-between gap-3';
+          itemEl.innerHTML = `
+            <div class="flex-1 min-w-0">
+              <h5 class="font-display text-body-md text-on-surface truncate">${item.title}</h5>
+              <span class="font-body-sm text-champagne-gold font-medium block mt-0.5">$ ${(item.price).toLocaleString('es-AR')}</span>
+            </div>
+            <div class="flex items-center gap-2 border border-titanium-border px-2 py-1 bg-surface-elevated">
+              <button onclick="updateQuantity('${item.title}', -1)" class="text-platinum-muted hover:text-on-surface text-xs">-</button>
+              <span class="font-body-sm text-xs font-semibold px-1">${item.quantity}</span>
+              <button onclick="updateQuantity('${item.title}', 1)" class="text-platinum-muted hover:text-on-surface text-xs">+</button>
+            </div>
+            <button onclick="removeFromCart('${item.title}')" class="text-platinum-muted hover:text-error transition-colors">
+              <span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+            </button>
+          `;
+          cartItemsContainer.appendChild(itemEl);
+        });
+      }
+    }
+
+    // Checkout via WhatsApp
+    checkoutBtn.addEventListener('click', () => {
+      if (cart.length === 0) return;
+      let text = "Hola Epsilon Store! Quisiera encargar las siguientes piezas de stock:%0A%0A";
+      let total = 0;
+      cart.forEach((i, idx) => {
+        text += `• ${i.quantity}x ${i.title} ($${(i.price * i.quantity).toLocaleString('es-AR')})%0A`;
+        total += (i.price * i.quantity);
+      });
+      text += `%0ATotal estimado: $${total.toLocaleString('es-AR')}%0APor favor, coordinemos forma de pago y despacho.`;
+      
+      const whatsappUrl = `https://wa.me/5491150012019?text=${text}`;
+      window.open(whatsappUrl, '_blank');
+    });
+
+    // Toast Functionality
+    function showToast(msg) {
+      toastMessage.textContent = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-10');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'pointer-events-none', '-translate-y-10');
+        toast.classList.remove('opacity-100', 'translate-y-0');
+      }, 3000);
+    }
+
+    // Category Filtering
+    function filterCategory(cat) {
+      const items = document.querySelectorAll('.product-item');
+      const buttons = document.querySelectorAll('.category-btn');
+      
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-surface-card', 'text-champagne-gold', 'border', 'border-titanium-border');
+        btn.classList.add('text-platinum-muted');
+      });
+
+      const activeBtn = document.getElementById(`filter-${cat}`);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-surface-card', 'text-champagne-gold', 'border', 'border-titanium-border');
+        activeBtn.classList.remove('text-platinum-muted');
+      }
+
+      items.forEach(item => {
+        if (cat === 'all' || item.getAttribute('data-category') === cat) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+
+
+
+
+
+</body></html>
